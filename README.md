@@ -11,7 +11,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `yarn serve`
+### `yarn server`
 
 Runs the server.\
 Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
