@@ -1,0 +1,190 @@
+[
+    {
+        "transactionID" : 1000,
+        "cardAccount" : "416973******3166",
+        "cardID" : 9823798,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+
+    {
+        "transactionID" : 1001,
+        "cardAccount" : "416973******3166",
+        "cardID" : 3000,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+
+    {
+        "transactionID" : 2000,
+        "cardAccount" : "416973******3166",
+        "cardID" : 1980094,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+
+    {
+        "transactionID" : 2002,
+        "cardAccount" : "416973******3166",
+        "cardID" : 120992,
+        "amount" : 0.85,
+        "currency" : "USD",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+    {
+        "transactionID" : 1290,
+        "cardAccount" : "416973******3166",
+        "cardID" : 1980094,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+    {
+        "transactionID" : 1292,
+        "cardAccount" : "416973******3166",
+        "cardID" : 120992,
+        "amount" : 0.85,
+        "currency" : "USD",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+    {
+        "transactionID" : 1293,
+        "cardAccount" : "416973******3166",
+        "cardID" : 3009,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+    {
+        "transactionID" : 1297,
+        "cardAccount" : "416973******3166",
+        "cardID" : 198765,
+        "amount" : 0.85,
+        "currency" : "EUR",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+
+    {
+        "transactionID" : 87754,
+        "cardAccount" : "416973******3166",
+        "cardID" : 198092,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+    {
+        "transactionID" : 12099,
+        "cardAccount" : "416973******3166",
+        "cardID" : 198092,
+        "amount" : 0.85,
+        "currency" : "EUR",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+
+    {
+        "transactionID" : 2367676,
+        "cardAccount" : "416973******3166",
+        "cardID" : 9823798,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+
+    {
+        "transactionID" : 283632,
+        "cardAccount" : "416973******3166",
+        "cardID" : 9823798,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+
+    {
+        "transactionID" : 629364,
+        "cardAccount" : "416973******3166",
+        "cardID" : 1980094,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+
+    {
+        "transactionID" : 757487,
+        "cardAccount" : "416973******3166",
+        "cardID" : 120992,
+        "amount" : 0.85,
+        "currency" : "USD",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    },
+    {
+        "transactionID" : 129836,
+        "cardAccount" : "416973******3166",
+        "cardID" : 1980094,
+        "amount" : 0.85,
+        "currency" : "AZN",
+        "transactionDate" : "06-08-2021",
+        "merchantInfo" : {
+            "name" : "AzTelekom/Baktelecom",
+            "category" : "Telecom Services"
+        }
+    }
+]

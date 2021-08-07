@@ -1,0 +1,25 @@
+.g-breadcrumb_item {
+    display: flex;
+
+    &,
+    & > a {
+        font-size: 16px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    &.active {
+        color: #8e8e8e;
+    }
+
+    & + & {
+        padding-left: 10px;
+
+        &:before {
+            display: inline-block;
+            padding-right: 10px;
+            color: #000;
+            content: attr(data-icon);
+        }
+    }
+}

@@ -1,0 +1,14 @@
+$dark: #242526;
+
+#g-header {
+    padding: 20px 0;
+    background-color: $dark;
+
+    .g-auth_btn {
+        color: #fff;
+        padding: 4px;
+        margin: 4px;
+        display: inline-block;
+        text-decoration: none;
+    }
+}

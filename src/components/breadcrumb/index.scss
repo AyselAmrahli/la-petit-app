@@ -1,0 +1,10 @@
+$gray: #e2e2e2;
+
+.g-breadcrumb {
+    display: flex;
+    flex-flow: wrap;
+    padding: 10px 15px;
+    margin: 10px;
+    list-style-type: none;
+    background-color: $gray;
+}
