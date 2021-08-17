@@ -8,7 +8,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useStyles } from '../shared/utils/styles';
 import { ITransactions } from '../shared/consts/model';
 
@@ -66,6 +66,10 @@ const breadcrumbsData = [
   const transactionDetail = detail?.map((item, index) => {
     return (
       <Fragment key={index}>
+
+        <ListItem> <Link className="detail-link" to={`/transactions/${item.transactionID}/cards/${item.cardID}`}>Go Card Detail</Link></ListItem>
+        <ListItem> <Link className="detail-link " to={`/cards/${item.cardID}/transactions/`}>Show other transactions</Link></ListItem>
+
         <ListItem className={classes.listItem}>
           Amount:    
           <ListItemText className={classes.listText} primary={item.amount} />

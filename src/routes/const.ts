@@ -39,7 +39,7 @@ const TransactionDetailPage = lazy(() => import('../pages/TransactionDetail'));
     },
     {
       path: '/transactions/:transactionId/cards/:cardId',
-      component: TransactionDetailPage,
+      component: CardDetailPage,
       isPrivate: true,
       exact: true
     },
@@ -63,7 +63,7 @@ const TransactionDetailPage = lazy(() => import('../pages/TransactionDetail'));
     },
     {
       path: '/cards/:cardId/transactions/:transactionId',
-      component: TransactionsPage,
+      component: TransactionDetailPage,
       isPrivate: true,
       exact: true
     },
