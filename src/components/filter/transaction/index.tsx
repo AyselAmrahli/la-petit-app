@@ -1,79 +1,85 @@
-import React, { FC } from 'react';
+import React, { ChangeEvent, FC, useState } from "react";
 
-import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from '@material-ui/core';
-import { useForm, Controller } from "react-hook-form";
-import { useStyles } from '../../../shared/utils/styles';
-import { ECurrency } from '../../../shared/consts/enum';
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@material-ui/core";
+import { useForm } from "react-hook-form";
+import { useStyles } from "../../../shared/utils/styles";
+import { ECurrency } from "../../../shared/consts/enum";
 
 interface IProps {
-    onSearch: any;
+  onSearch: any;
+  searchParams: any;
 }
 
-const TransactionFilter: FC<IProps> = ({onSearch}) => {
+const TransactionFilter: FC<IProps> = ({ onSearch, searchParams }) => {
   const classes = useStyles();
-  const { handleSubmit, control } = useForm();
+  const { handleSubmit } = useForm();
+  const [query, setQuery] = useState(searchParams);
+  console.log(searchParams);
 
+  const onSubmit = () => onSearch(query);
 
-  const onSubmit = (data:any) => onSearch(data);
+  const onChange = (e: ChangeEvent<any>) => {
+    setQuery({
+      ...query,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={classes.typog}>
+      <TextField
+        label="Transaction Id"
+        name="transactionID"
+        variant="outlined"
+        value={query.transactionID}
+        defaultValue={query.transactionID}
+        onChange={onChange}
+      />
 
-        <Controller
-            name="transactionID"
-            control={control}
-            defaultValue=""
-            render={({ field: { onChange, value } }) => (
-                <TextField
-                label="Transaction Id" 
-                variant="outlined" 
-                value={value}
-                onChange={onChange}
-                />
-            )}
-        />
-          
-        <Controller
-            name="cardID"
-            control={control}
-            defaultValue=""
-            render={({ field: { onChange, value } }) => (
-                <TextField
-                label="Card Id" 
-                variant="outlined" 
-                value={value}
-                onChange={onChange}
-                />
-            )}
-        />
+      <TextField
+        label="Card Id"
+        name="cardId"
+        variant="outlined"
+        value={query.cardId}
+        defaultValue={query.cardId}
+        onChange={onChange}
+      />
 
-        <Controller
-            name="currency"
-            control={control}
-            defaultValue=""
-            render={({ field: { onChange, value = '' } }) => (
-                <FormControl className={classes.formControl} variant="outlined">
-                <InputLabel id="currency-label">Currency</InputLabel>
-                <Select
-                    labelId="currency-label"
-                    id="currency-outlined"
-                    value={value}
-                    onChange={onChange}
-                    label="currency"
-                >
-                    <MenuItem value={ECurrency.AZN}>AZN</MenuItem>
-                    <MenuItem value={ECurrency.USD}>USD</MenuItem>
-                    <MenuItem value={ECurrency.EUR}>EUR</MenuItem>
-                </Select>
-                </FormControl>
-            )}
-        />
+      <FormControl className={classes.formControl} variant="outlined">
+        <InputLabel id="currency-label">Currency</InputLabel>
+        <Select
+          labelId="currency-label"
+          id="currency-outlined"
+          name="currency"
+          value={query.currency}
+          defaultValue={query.currency}
+          onChange={onChange}
+          label="currency"
+        >
+          <MenuItem value={ECurrency.AZN}>AZN</MenuItem>
+          <MenuItem value={ECurrency.USD}>USD</MenuItem>
+          <MenuItem value={ECurrency.EUR}>EUR</MenuItem>
+        </Select>
+      </FormControl>
 
-
-        <Button type="submit" variant="contained" color="secondary" className={classes.button} size="large">Search</Button>
-
+      <Button
+        type="submit"
+        variant="contained"
+        color="secondary"
+        className={classes.button}
+        size="large"
+      >
+        Search
+      </Button>
     </form>
   );
-}
+};
 
-export default TransactionFilter
+export default TransactionFilter;
