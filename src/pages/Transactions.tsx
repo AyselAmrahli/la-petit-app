@@ -55,11 +55,14 @@ const Transactions: FC = () => {
 
   const { transactionsParams, setTransactionsParams } = useTransactionsParams();
 
+
   useEffect(() => {
     // get transactions list
+    console.log(transactionsParams);
+    setTransactionsParams({...transactionsParams, cardId});
     (async () => {
       try {
-        const response = await transactionsAPI.get(transactionsParams);
+        const response = await transactionsAPI.get({...transactionsParams, cardId});
         setTransaction(response.data);
         setPages(Math.ceil(response.data.length / perPage));
       } catch (err) {

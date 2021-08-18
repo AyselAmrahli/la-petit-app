@@ -1,16 +1,17 @@
 import React, { FC, Fragment, useEffect, useState } from "react";
 
 import { transactionsAPI } from "../services";
-import { Container, Typography } from "@material-ui/core";
+import { Button, Container, Typography } from "@material-ui/core";
 import Breadcrumb from "../components/breadcrumb";
 import BreadcrumbItem from "../components/breadcrumb/BreadcrumbItem";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { useStyles } from "../shared/utils/styles";
 import { ITransactions } from "../shared/consts/model";
+import { useTransactionsParams } from "../shared/context/transaction";
 
 interface IParams {
   transactionId: string;
@@ -20,6 +21,9 @@ const TransactionDetail: FC = () => {
   const classes = useStyles();
   const [detail, setDetail] = useState<Array<ITransactions>>([]);
   const { transactionId } = useParams<IParams>();
+  const history = useHistory();
+
+  const { transactionsParams, setTransactionsParams } = useTransactionsParams();
 
   const breadcrumbsData = [
     {
@@ -50,6 +54,16 @@ const TransactionDetail: FC = () => {
     })();
   }, []);
 
+  const goToTransactions = (id: number) => {
+    setTransactionsParams({
+      transactionID: "",
+      cardId: id,
+      currency: "",
+    });
+    history.push(`/cards/${id}/transactions`);
+  };
+
+
   const breadcrumbs = breadcrumbsData.map(({ to, active, title }, i) => {
     return (
       <BreadcrumbItem {...{ to, active }} key={i}>
@@ -71,13 +85,16 @@ const TransactionDetail: FC = () => {
           </Link>
         </ListItem>
         <ListItem>
-          {" "}
-          <Link
-            className="detail-link "
-            to={`/transactions/?cardId=${item.cardId}`}
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            size="small"
+            onClick={() => goToTransactions(item.cardId)}
           >
             Show other transactions
-          </Link>
+          </Button>
         </ListItem>
 
         <ListItem className={classes.listItem}>

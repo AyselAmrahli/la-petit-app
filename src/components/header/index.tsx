@@ -32,12 +32,12 @@ const Header: FC = () => {
                     
                    {userToken.isAuthenticated() ? 
                         <>
-                            <Link className="g-auth_btn" to="/transactions">
+                            <a className="g-auth_btn" href="/transactions">
                                 Transactions
-                            </Link>
-                            <Link className="g-auth_btn" to="/cards">
+                            </a>
+                            <a className="g-auth_btn" href="/cards">
                                 Cards
-                            </Link>
+                            </a>
                             <Button
                                 variant="contained"
                                 onClick={logoutHandler}
