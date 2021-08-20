@@ -16,6 +16,7 @@ const TransactionsProvider = ({ children }: IProps) => {
   const [transactionsParams, setTransactionsParams] = useState<any>({
     transactionID: "",
     cardId: "",
+    amount: "",
     currency: "",
   });
 

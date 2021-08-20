@@ -52,6 +52,17 @@ const TransactionFilter: FC<IProps> = ({ onSearch, searchParams }) => {
         onChange={onChange}
       />
 
+      <TextField
+        name="amount"
+        label="Amount"
+        variant="outlined"
+        defaultValue={query.amount}
+        onChange={onChange}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+
       <FormControl className={classes.formControl} variant="outlined">
         <InputLabel id="currency-label">Currency</InputLabel>
         <Select
