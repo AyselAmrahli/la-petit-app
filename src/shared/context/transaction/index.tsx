@@ -17,6 +17,7 @@ const TransactionsProvider = ({ children }: IProps) => {
     transactionID: "",
     cardId: "",
     amount: "",
+    transactionDate: "",
     currency: "",
   });
 

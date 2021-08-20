@@ -1,5 +1,4 @@
 import React, { ChangeEvent, FC, useState } from "react";
-
 import {
   Button,
   FormControl,
@@ -21,6 +20,13 @@ const TransactionFilter: FC<IProps> = ({ onSearch, searchParams }) => {
   const classes = useStyles();
   const { handleSubmit } = useForm();
   const [query, setQuery] = useState(searchParams);
+  const [selectedDate, setSelectedDate] = React.useState<Date | null>(
+    new Date('2014-08-18T21:11:54'),
+  );
+
+  const handleDateChange = (date: any) => {
+    setSelectedDate(date);
+  };
   console.log(searchParams);
 
   const onSubmit = () => onSearch(query);
@@ -57,6 +63,18 @@ const TransactionFilter: FC<IProps> = ({ onSearch, searchParams }) => {
         label="Amount"
         variant="outlined"
         defaultValue={query.amount}
+        onChange={onChange}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+
+      <TextField
+        label="Date"
+        variant="outlined"
+        name="transactionDate"
+        type="date"
+        defaultValue={query.transactionDate}
         onChange={onChange}
         InputLabelProps={{
           shrink: true,
